@@ -33,11 +33,6 @@ stdenv.mkDerivation rec {
     sha256 = "ZOodjp7cHCW0WpIOgNr2dVnRhm/81/hDL+z+ptD+iJc=";
   };
 
-  patches = [
-    # https://gitlab.gnome.org/GNOME/gspell/-/merge_requests/10
-    ./0001-Darwin-build-fix.patch
-  ];
-
   nativeBuildInputs = [
     docbook-xsl-nons
     glib # glib-mkenums
