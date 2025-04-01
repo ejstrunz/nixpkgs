@@ -54,7 +54,7 @@ stdenv.mkDerivation rec {
   meta = with lib; {
     homepage = "https://people.redhat.com/~rjones/augeas/";
     description = "OCaml bindings for Augeas";
-    license = with licenses; lgpl21Plus;
-    platforms = with platforms; linux;
+    license = licenses.lgpl21Plus;
+    platforms = intersectLists augeas.meta.platforms ocaml.meta.platforms;
   };
 }
